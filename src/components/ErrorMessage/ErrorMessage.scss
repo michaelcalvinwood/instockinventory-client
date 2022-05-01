@@ -1,0 +1,22 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/colors" as *;
+
+.error {
+  display: flex;
+  align-content: center;
+  padding-top: 4px;
+
+  &__text {
+    color: #c94515;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__image {
+    height: 16px;
+  }
+}

@@ -1,0 +1,87 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+
+.header { 
+    background-color: $graphite;
+    padding: 1rem 1rem 2rem 1rem;
+    width: 100%;
+    height: 12.5rem;
+
+    @include tablet { 
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 1.5rem 2rem 3rem 2rem;
+        height: 11.625rem;
+    }
+    
+    @include desktop { 
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    &__logo-holder { 
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin-bottom: 1rem;
+
+        @include tablet { 
+            margin-bottom: 0;
+        }
+    }
+    &__lists { 
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: visible;
+
+        &--active { 
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        &--inactive { 
+            padding-left: 0;
+        }
+
+        @include tablet { 
+            padding-right: 0;
+            margin-bottom: 1rem;
+        }
+
+    }
+    &__links { 
+        text-decoration: none;
+        list-style: none;
+        color: $cloud;
+
+        &:hover { 
+            text-decoration: underline;
+            text-decoration-color: $cloud;
+        }
+
+        @include tablet { 
+            padding-right: 1.5rem;
+            padding-left: 1rem;
+            margin-bottom: -1rem;
+        }
+
+        &--active { 
+            background-color: $instock-black;
+            color: $white;
+            border-radius: 1.25rem;  
+            padding: 0.5rem 1.5rem 0.5rem 1.5rem;  
+        }
+
+        &--inactive { 
+            padding-left: 1.5rem;
+        }
+    }
+    &__item { 
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+
+    }
+}

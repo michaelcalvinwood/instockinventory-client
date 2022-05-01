@@ -1,0 +1,44 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.warehouse {
+    @include section-layout;
+    
+    &__outer-shell {
+       @include outer-shell-layout;
+    }
+    &__page {
+       @include page-layout;
+    }
+    &__contact-section {
+        border-top: 1px solid $cloud;
+        border-bottom: 1px solid $cloud;
+        padding: 16px 24px 16px 24px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__address {
+        margin: 0 0 1rem 0;
+
+        @include tablet {
+            border-right: 1px solid $cloud;
+            width: 39.5%;
+            margin: 0 40px 0 0;
+        }
+    }
+    &__name-info-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include tablet {
+            margin: 0 14.6% 0 0;
+        }
+        @include desktop {
+            margin: 0 10.5% 0 0;
+        }
+    }
+}

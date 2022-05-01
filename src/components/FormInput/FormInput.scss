@@ -1,0 +1,26 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/colors" as *;
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    text-align: left;
+    color: #13182c;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 1rem;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 1.5rem;
+    }
+  }
+  &__input-field {
+    @include input-styling
+  }
+
+}

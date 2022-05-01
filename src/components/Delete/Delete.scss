@@ -1,0 +1,132 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+
+.delete { 
+    background-color: $white;
+    position: fixed;
+    z-index: 5;
+    left: -100vw;
+    top: 0vw; 
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+
+    &--active {
+        transform: translateX(100vw);
+    }
+
+    @include tablet { 
+        position: absolute;
+        height: 16.375rem;
+        width: 42rem;
+        margin: 11.5625rem auto 0 calc((100vw - 42rem)/2);
+    }
+    
+    &__overlay { 
+        display: none;
+
+        @include tablet {
+            display: block; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 3;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 0;
+            padding: 0;
+        }
+        &--off { 
+            display: none;
+        }
+    }
+    &__holder {
+        padding: 1rem;
+
+        @include tablet {
+        display: block; 
+        z-index: 5 !important;
+        background-color: $white;
+        }
+    }
+    &__exit-button { 
+        position:absolute;
+        top: 1.3125rem;
+        right: 1.3125rem;
+        border: 1px solid $white;
+
+        &:hover { 
+            border-color: $instock-indigo;
+        }
+    }
+    &__heading { 
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 36px;
+        color: $instock-black;
+        margin-bottom: 1rem;
+        margin-top: 2.75rem;
+    }
+    &__comment { 
+        font-size: 0.9375rem;
+        line-height: 26px;
+        color: $instock-black;
+    }
+
+    &__button-holder {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 35rem;
+        width: 100%;
+
+        @include tablet { 
+            top: 0;
+            justify-content: flex-end;
+        }
+    }
+    &__cancel-button { 
+        background-color: $white;
+        color: $slate;
+        border: 1px solid $cloud;
+        border-radius: 20px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 20px;
+        width: 50%;
+        height: 2.25rem;
+
+        @include tablet { 
+            height: 2.375rem;
+            width: 4.4375rem;
+        }
+
+        &:hover {
+            color: $instock-indigo;
+            border-color: $instock-indigo;
+        }
+    }
+    &__delete-button { 
+        background-color: $red;
+        color: $white;
+        border: none;
+        border-radius: 20px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 20px;
+        width: 50%;
+        height: 2.25rem;
+        margin-left: 1rem;
+
+        @include tablet { 
+            height: 2.375rem;
+            width: 4.4375rem;
+        }
+
+        &:hover { 
+            background: $graphite;
+        }
+
+    }
+}

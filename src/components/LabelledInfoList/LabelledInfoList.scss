@@ -1,0 +1,352 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.labelled-info-list {
+    &__no-content {
+        font-size: 12px;
+        padding: 16px;
+    }
+    &__heading-action-container {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            color: $slate;
+            justify-content: space-between;
+            padding: 0 32px 0 32px;
+            height: 3rem;
+            font-size: 12px;
+            line-height: 18px;
+            background-color: rgba(247, 248, 249, 0.7);
+    
+        }
+    }
+    &__heading {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            width: 100%;
+            box-sizing:content-box;
+            width: calc(100vw - 128px);
+            background-color: rgba(247, 248, 249, 0.7);
+            height: 3rem;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__inventory-item {
+        
+        @include tablet {
+            display: flex;
+            align-items:center;
+            width: calc($tablet-column1 - 64px);
+
+            &--has-fifth {
+                width: calc($tablet-fifth-column1 - 64px);
+            }
+        }
+        @include desktop {
+            width: $desktop-column1;
+
+            &--has-fifth {
+                width: $desktop-fifth-column1;
+            }
+        }
+    }
+    &__category {
+       
+        @include tablet {
+            display: flex;
+            align-items: center;
+            width: $tablet-column2;
+
+            &--has-fifth {
+                width: $tablet-fifth-column2;
+            }
+
+        }
+        @include desktop {
+            width: $desktop-column2;
+            
+            &--has-fifth {
+                width: $desktop-fifth-column2;
+            }
+
+        }
+    }
+    &__status {
+        width: $tablet-column3;
+        @include tablet {
+            display: flex;
+            align-items: center;
+
+            &--has-fifth {
+                width: $tablet-fifth-column3;
+            }
+        }
+        @include desktop {
+            width: $desktop-column3;
+
+            &--has-fifth {
+                width: $desktop-fifth-column3;
+            }
+
+        }
+    }
+    &__quantity {
+        width: $tablet-column4;
+        @include tablet {
+            display: flex;
+            align-items: center;
+
+            &--has-fifth {
+                width: $tablet-fifth-column4;
+            }
+        }
+        @include desktop {
+            width: $desktop-column4;
+
+            &--has-fifth {
+                width: $desktop-fifth-column4;
+            }
+
+        }
+    }
+    &__warehouse {
+
+        @include tablet {
+            width: $tablet-fifth-column5;
+            display: flex;
+            align-items: center;
+        }
+        @include desktop {
+            width: $desktop-fifth-column5;
+        }
+        &--disabled {
+            display:none;
+        }
+    }
+    &__actions {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc($tablet-column5 - 64px);
+
+            &--has-fifth {
+                width: calc($tablet-fifth-column6 - 64px);
+            }
+        }
+        @include desktop {
+            width: $desktop-column5;
+
+            &--has-fifth {
+                width: $desktop-fifth-column6;
+            }
+        }
+    }
+    &__sort-icon {
+        @include tablet {
+            height: 12px;
+            margin: 0 0 0 9px;
+        }
+    }
+    &__item {
+        margin: 16px 0 0 0;
+        border-bottom: 1px solid $cloud;
+        
+        @include tablet {
+            display: flex;
+            margin: 0 0 0 0;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 32px 0 32px;
+            
+            &:hover {
+                background-color: rgba(46, 102, 230, 0.07);
+            }
+        }
+    }
+    &__pair-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px 0 16px;
+        max-width: 400px;
+
+        @include tablet {
+            padding: 0 0 0 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    }
+    &__first-pair {
+        display: inline-block;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 0 0;
+            height: 3rem;
+            
+            &--second-line {
+                height: 4rem;
+            }
+        }
+    }
+    &__detail0 {
+        @include tablet {
+            width: calc($tablet-column1 - 64px);
+
+            &--has-fifth {
+                width: calc($tablet-fifth-column1 - 64px);
+            }
+        }
+        @include desktop {
+            width: $desktop-column1;
+
+            &--has-fifth {
+                width: $desktop-fifth-column1;
+            }
+
+        }
+        
+    }
+    &__detail1 {
+        margin: 20px 0 0 0;
+
+        @include tablet {
+            margin: 0 0 0 0;
+            width: $tablet-column2;
+
+            &--has-fifth {
+                width: $tablet-fifth-column2;
+            }
+        }
+        @include desktop {
+            width: $desktop-column2;
+
+            &--has-fifth {
+                width: $desktop-fifth-column2;
+            }
+        }
+    }
+    &__second-pair {
+        display: inline-block;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3rem;
+
+            &--second-line {
+                height: 4rem;
+            }
+        }
+    }
+    &__detail2 {
+        @include tablet {
+            width: $tablet-column3;
+
+            &--has-fifth {
+                width: $tablet-fifth-column3;
+            }
+        }
+        @include desktop {
+            width: $desktop-column3;
+
+            &--has-fifth {
+                width: $desktop-fifth-column3;
+            }
+
+        }
+    }
+    &__detail3 {
+        margin: 20px 0 0 0;
+
+        @include tablet {
+            margin: 0 0 0 0;
+            width: $tablet-column4;
+
+            &--has-fifth {
+                width: $tablet-fifth-column4;
+            }
+        }
+        @include desktop {
+            width: $desktop-column4;
+
+            &--has-fifth {
+                width: $desktop-fifth-column4;
+                
+            }
+        }
+    }
+    &__detail4 {
+        margin: 20px 0 0 0;
+
+        @include tablet {
+            display: block;
+            margin: 0;
+            &--has-fifth {
+                width: $tablet-fifth-column5;
+            }
+        }
+        @include desktop {
+            &--has-fifth {
+                width: $desktop-fifth-column5;
+            }
+        }
+    }
+    &__action-items {
+        margin: 20px 0 27px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px 0 16px;
+
+        @include tablet {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            width: calc($tablet-column5 - 64px);
+            height: 3rem;
+            justify-content: flex-end;
+            
+            &--second-line {
+                height: 4rem;
+            }
+            &--has-fifth {
+                width: calc($tablet-fifth-column6 - 64px);
+            }
+        }
+        @include desktop {
+            width: $desktop-column5;
+
+            &--has-fifth {
+                width: $desktop-fifth-column6;
+            }
+
+        }
+    }
+    &__delete {
+        height: 18px;
+        width: auto;
+
+        @include tablet {
+            margin: 0 8px 0 0;
+            width: 2rem;
+        }
+    }
+    &__edit {
+        height: 18px;
+        width: auto;
+
+        @include tablet {
+            width: 2rem;
+        }
+    }
+}

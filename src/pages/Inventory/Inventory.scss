@@ -1,0 +1,50 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.inventoryDetails {
+    width: 100%;
+    margin: 16px 0 0 0;
+    @include page-layout;
+
+    &__container{
+        border-top: 1px solid $cloud;
+        
+        @include tablet{
+            display: flex;
+        }
+    }
+    &__description {
+        padding: 16px 24px 8px 24px;
+
+        @include tablet {
+            padding: 0 24px 0 24px;
+            margin: 24px 0 24px 0;
+            width: 50%;
+            border-right: 1px solid $cloud;
+        }
+    }
+    &__category {
+        margin: 1rem 0 0 0;
+
+        @include tablet {
+            margin: 32px 0 0 0;
+        }
+    }
+    &__availability {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 8px 24px 16px 24px;
+
+        @include tablet {
+            padding: 0 24px 0 24px;
+            margin: 24px 0 24px 0;
+            width: 50%;
+        }
+    }
+    &__status,&__quantity{
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+}

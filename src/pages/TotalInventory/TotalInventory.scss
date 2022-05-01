@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+.total-inventory {
+    @include section-layout;
+    
+    &__outer-shell {
+       @include outer-shell-layout;
+    }
+    &__page {
+       @include page-layout;
+    }
+}

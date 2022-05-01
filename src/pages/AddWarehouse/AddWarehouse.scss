@@ -1,0 +1,115 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+
+
+.add-warehouse{
+    @include section-layout;
+
+    &__outer-shell{
+        @include outer-shell-layout;
+    }
+    &__page{
+        @include page-layout;
+    }
+}
+
+.add-form {
+    border-top: 1px solid $cloud;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__header {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        margin-top: 0;
+
+        @include tablet {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &--contact {
+            padding-top: 1rem;
+            @include tablet {
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+    &__details-container {
+        width: 100%;
+        padding: 1.5rem;
+
+        @include tablet {
+            width: 50%;
+            margin: 1.5rem 0 2rem;
+            padding: 0 32px;
+        }
+
+        @include desktop {
+            padding: 0 40px;
+        }
+        &--contact {
+            border-top: $cloud solid 1px;
+            padding-top: 0;
+            
+            @include tablet {
+                border: none;
+                border-left: solid 1px $cloud;
+            }
+        }
+    }
+    &__button-container {
+        padding: 0 1.5rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        
+        @include tablet {
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+    &__cancel-button {
+        cursor: pointer;
+        width: 45%;
+        padding: 8px 8px;
+        background-color: $white;
+        border: 1px solid $cloud;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-weight: 400;
+        font-size: 13px;
+        text-align: center;
+        line-height: 20px;
+        color: $slate;
+        text-decoration: none;
+
+        @include tablet {
+            text-align: center;
+            width: 72px;
+            padding: 8px 8px;
+            margin-left: 1rem;
+        }
+
+        @include desktop {
+            width: 72px;
+            height: 38px;
+        }
+    }
+    &__save-button {
+        @extend .add-form__cancel-button;
+        background-color: #2e66e6;
+        color: #ffffff;
+
+        @include tablet{
+            width: 138px;
+        }
+    }
+}
